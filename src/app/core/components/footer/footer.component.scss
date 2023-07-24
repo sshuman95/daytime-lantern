@@ -1,10 +1,16 @@
 @import "variables";
 
-section {
+.footer-content {
   background: $primary;
   color: white;
   padding: 1rem;
-  p {
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
   }
 }

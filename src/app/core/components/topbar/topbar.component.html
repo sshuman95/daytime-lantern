@@ -1,8 +1,14 @@
 <mat-toolbar color="primary">
   <div class="content">
-    <div>
-      <a [routerLink]="['']" class="home-link">Daytime Lantern</a>
-    </div>
+    <a [routerLink]="['']" aria-label="Go to Home" class="content__logo">
+      <img
+        src="../../../../assets/images/lantern.svg"
+        height="30px"
+        width="30px"
+        alt="Lantern Logo"
+      />
+      <span class="home-link">Daytime Lantern</span>
+    </a>
     <div *ngIf="viewModel$ | async as viewModel">
       <button
         (click)="toggleDrawer()"
