@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <div class="content">
+    <div>
+      <a [routerLink]="['']" class="home-link">Daytime Lantern</a>
+    </div>
+    <div *ngIf="viewModel$ | async as viewModel">
+      <button
+        (click)="toggleDrawer()"
+        mat-icon-button
+        aria-label="Toggle side navigation"
+        *ngIf="(viewModel?.deviceSize ?? 0) < 700"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,27 @@
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+footer {
+  width: 100%;
+}
+
+mat-drawer {
+  width: 250px;
+}
+
+mat-drawer-container {
+  height: calc(100vh - 56px);
+}
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 599px) {
+  mat-drawer-container {
+    height: calc(100vh - 64px);
+  }
+}

@@ -1,0 +1,10 @@
+@import "variables";
+
+section {
+  background: $primary;
+  color: white;
+  padding: 1rem;
+  p {
+    margin: 0;
+  }
+}
