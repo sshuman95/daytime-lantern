@@ -5,14 +5,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('./pages/main/main.component').then((comp) => comp.MainComponent),
+      import('./pages/main/main.component').then(comp => comp.MainComponent),
   },
   {
     path: 'about',
     loadComponent: () =>
-      import('./pages/about/about.component').then(
-        (comp) => comp.AboutComponent
-      ),
+      import('./pages/about/about.component').then(comp => comp.AboutComponent),
   },
   {
     path: '',

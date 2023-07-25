@@ -14,9 +14,7 @@ describe('AppComponent', () => {
         TopbarComponent,
         FooterComponent,
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
@@ -25,5 +23,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
 });

@@ -9,7 +9,7 @@ describe('TopbarComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [TopbarComponent, RouterTestingModule]
+      imports: [TopbarComponent, RouterTestingModule],
     });
     fixture = TestBed.createComponent(TopbarComponent);
     component = fixture.componentInstance;

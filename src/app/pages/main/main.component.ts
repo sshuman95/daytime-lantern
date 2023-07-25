@@ -7,11 +7,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-  ],
+  imports: [CommonModule, RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainComponent {
-}
+export class MainComponent {}

@@ -7,12 +7,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  standalone: true
+  imports: [CommonModule, RouterModule],
+  standalone: true,
 })
-export class NavMenuComponent {
-
-}
+export class NavMenuComponent {}
