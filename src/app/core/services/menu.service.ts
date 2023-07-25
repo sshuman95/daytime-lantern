@@ -13,7 +13,7 @@ export class MenuService {
     new BehaviorSubject<boolean>(false);
   public something = 0;
   public deviceSize$: Observable<number> = fromEvent(window, 'resize').pipe(
-    map((_) => {
+    map(() => {
       return window.innerWidth;
     }),
     debounceTime(200),
