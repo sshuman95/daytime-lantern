@@ -18,7 +18,7 @@ jobs:
         run: npm ci
 
       - name: Run Linter
-        run: npm run ng lint
+        run: npm run lint -- --max-warnings 0
 
       - name: Run Unit Tests
         run: npm run test-ci
