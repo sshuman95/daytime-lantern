@@ -17,8 +17,8 @@ export class MenuService {
       return window.innerWidth;
     }),
     debounceTime(200),
-    distinctUntilChanged(),
-    startWith(window.innerWidth)
+    startWith(window.innerWidth),
+    distinctUntilChanged()
   );
 
   public viewModel$: Observable<{ deviceSize?: number; isOpen?: boolean }> =
@@ -38,8 +38,6 @@ export class MenuService {
     );
 
   public toggleDrawer() {
-    this.something++;
-    console.log(this.something);
     this.isOpenSubject.next(!this.isOpenSubject.getValue());
   }
 
