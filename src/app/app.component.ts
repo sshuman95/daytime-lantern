@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   public viewModel$?: Observable<{ deviceSize?: number; isOpen?: boolean }>;
 
   public ngOnInit(): void {
-    this.viewModel$ = this._menuService.viewModel$;
+    this.viewModel$ = this._menuService.viewModel$
   }
 
   public closeDrawer() {
