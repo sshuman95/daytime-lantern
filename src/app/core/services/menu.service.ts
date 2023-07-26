@@ -11,18 +11,20 @@ import {
 export class MenuService {
   private isOpenSubject: BehaviorSubject<boolean> =
     new BehaviorSubject<boolean>(false);
-  public something = 0;
+
+  public isOpen$ = this.isOpenSubject.asObservable();
+
   public deviceSize$: Observable<number> = fromEvent(window, 'resize').pipe(
     map(() => {
-      return window.innerWidth;
+      return window ? window.innerWidth : 0;
     }),
     debounceTime(200),
-    startWith(window.innerWidth),
+    startWith(window ? window.innerWidth : 0),
     distinctUntilChanged()
   );
 
   public viewModel$: Observable<{ deviceSize?: number; isOpen?: boolean }> =
-    combineLatest([this.deviceSize$, this.isOpenSubject]).pipe(
+    combineLatest([this.deviceSize$, this.isOpen$]).pipe(
       map(([deviceSize, isOpen]) => {
         if (deviceSize < 700) {
           return {
@@ -37,11 +39,11 @@ export class MenuService {
       })
     );
 
-  public toggleDrawer() {
+  public toggleDrawer(): void {
     this.isOpenSubject.next(!this.isOpenSubject.getValue());
   }
 
-  public closeDrawer() {
+  public closeDrawer(): void {
     this.isOpenSubject.next(false);
   }
 }
